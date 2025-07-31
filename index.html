@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Anime Lounge Registration Form</title>
+        <link rel="stylesheet" href="formProject.css">
+    </head>
+<body>
+    <h1 id="title">The Anime lounge</h1>
+  <p id="description">Welcome to anime lounge- your home for anime passion.A community of fans sharing the love for anime, from classics to the latest hits. Dive into reviews, fan art, and everything in between.</p>
+
+<form id="survey-form" action="https://formspree.io/f/xzzvvrko" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://zenshinanimelounge.netlify.app/thankyou.html">
+    <p><b>please enter the required details</b></p>
+    <fieldset>
+        <label id="name-label" name="user-name"> Enter your name: <input type="text" name="name" required id="name" placeholder=" e.g Kelvin mccoski"> </label>
+        <label id="email-label" name="user-email"> Enter your email: <input type="email" name="email" required id="email" placeholder="e.g john12@gmail.com" ></label> 
+        <label id="number-label" name="user-age"> Enter your age: <input type="number" name="age" id="number" min="14" max="55" required placeholder="e.g 18"></label>
+    </fieldset>
+    <fieldset>
+        <label id="genre">Choose you favorite genre:<select id="dropdown" name="genre">
+            <option value="">(select one genre)</option>
+            <option value="Action">Action</option>
+            <option value="Romance">Romance</option>
+            <option value="Isekai">Isekai</option>
+            <option value="Ecchi">Ecchi</option>
+            </select>
+              </label>
+    </fieldset>
+    <fieldset>
+            <label for="subtitle-eng"> <input type="radio" value="dub" name="sub-dub" class="inline" id="subtitle-eng" checked> English dub
+            </label>
+            <label for="subtitle-jap"> <input type="radio" value="sub" name="sub-dub" class="inline" id="subtitle-jap"> English sub
+            </label>
+    </fieldset>
+    <fieldset>
+        <label> Tell us more about your anime interests: </label>
+        <textarea name="interests" placeholder="Share your favorite anime, character, or thoughts..."></textarea>
+    </fieldset>
+
+    <fieldset>
+        <label>
+            <input type="checkbox" class="inline" value="news" name="updates">Receive anime news
+        </label>
+        <label>
+            <input type="checkbox" class="inline" value="fanart" name="updates">Join fan art club
+        </label>
+    </fieldset>
+<input type="submit" id="submit" value="Submit" name="submit">
+</form>
+</body>
+</html>
